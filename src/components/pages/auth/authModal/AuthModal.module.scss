@@ -1,0 +1,74 @@
+.authModal {
+  width: fit-content;
+  text-align: center;
+  padding: 48px 58px;
+}
+
+.logoIcon {
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.title {
+  margin-top: 32px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 110%;
+  color: $black-5;
+}
+
+.description {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 150%;
+  position: relative;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.83), $grey-1) no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.form {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.checkboxBlock {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  align-items: center;
+
+  label {
+    color: $grey-2;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  input {
+    width: 18px;
+    height: 18px;
+    border: 2px solid $grey-4;
+  }
+}
+
+.submitBtn {
+  margin-top: 20px;
+  border-radius: 12px;
+  border: 1px solid $blue-2;
+  color: $white-1;
+  height: 54px;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 120%;
+}

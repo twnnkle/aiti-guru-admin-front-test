@@ -1,0 +1,74 @@
+.footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+
+  @include mobile {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+.productsCounter {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: $grey-11;
+
+  span {
+    color: $black-3;
+  }
+}
+
+.pagination {
+  display: flex;
+  list-style: none;
+  gap: 5px;
+}
+
+.pageLink {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $grey-17;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-family: "Cairo", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: $grey-5;
+  border-radius: 4px;
+
+  @include hover {
+    border-color: $blue-3;
+    background-color: $blue-3;
+    color: $white-1;
+  }
+}
+
+.activePage {
+  .pageLink {
+    border-color: $blue-3;
+    background-color: $blue-3;
+    color: $white-1;
+  }
+}
+
+.prevPageLink,
+.nextPageLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+
+  @include hover {
+    svg path {
+      fill: $blue-3;
+    }
+  }
+}

@@ -1,0 +1,162 @@
+.productsTable {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 40px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+
+  th,
+  td {
+    text-align: left;
+    vertical-align: middle;
+    font-size: 16px;
+  }
+
+  th {
+    font-weight: 700;
+    padding: 25px 18px;
+    white-space: nowrap;
+    border-bottom: 1px solid $grey-8;
+    color: $grey-5;
+    font-family: "Cairo", sans-serif;
+
+    &.sortable {
+      cursor: pointer;
+      user-select: none;
+
+      @include hover {
+        background-color: $grey-8;
+      }
+    }
+  }
+
+  td {
+    border-bottom: 2px solid $grey-8;
+    padding: 12px 18px;
+  }
+}
+
+.selectedRow {
+  box-shadow: inset 3px 0 0 $blue-4;
+}
+
+.checkboxCell {
+  width: 48px;
+  text-align: center;
+}
+
+.productInfo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-family: "Cairo", sans-serif;
+  line-height: 100%;
+}
+
+.productImage {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.productTitleAndCategory {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.productTitle {
+  font-weight: 700;
+  font-size: 16px;
+  color: $black-6;
+}
+
+.productCategory {
+  font-size: 14px;
+  font-weight: 400;
+  color: $grey-5;
+}
+
+.brand,
+.sku,
+.rating {
+  font-family: "Open Sans", sans-serif;
+  color: $black-1;
+}
+
+.brand {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.sku {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.rating {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.lowRating {
+  color: $red-1;
+}
+
+.price {
+  font-family: "Roboto Mono", monospace;
+  color: $black-4;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.priceRemains {
+  color: $grey-6;
+}
+
+.btns {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+
+  button {
+    border: none;
+  }
+}
+
+.addBtn {
+  width: 52px;
+  height: 27px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 23px;
+  background-color: $blue-1;
+  cursor: pointer;
+  transition: background-color 0.2s;
+
+  @include hover {
+    background-color: $blue-2;
+  }
+}
+
+.moreBtn {
+  background: none;
+  cursor: pointer;
+  display: flex;
+
+  svg path {
+    transition: fill 0.2s;
+  }
+
+  @include hover {
+    svg path {
+      fill: $grey-10;
+    }
+  }
+}
