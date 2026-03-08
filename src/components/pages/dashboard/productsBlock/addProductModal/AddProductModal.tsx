@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useForm, Controller } from "react-hook-form";
 
 import styles from "./AddProductModal.module.scss";
@@ -40,6 +41,12 @@ function AddProductModal({ isOpenModal, toggleModal }: AddProductModalProps) {
     toggleModal();
     console.log(data);
   };
+
+  useEffect(() => {
+    if (!isOpenModal) {
+      reset();
+    }
+  }, [isOpenModal, reset]);
 
   return (
     <Modal isOpen={isOpenModal} onClose={toggleModal} title='Добавить товар'>
